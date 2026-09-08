@@ -1,3 +1,172 @@
+commit 48ab704d34cb1ccb4382b3425e1857b51725fe37
+Merge: 1093761 ca72c3f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 30 10:04:02 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit 1093761e1842fdffc90d2d3b1396c52fccc47533
+Merge: e109065 9a6e2a6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 30 01:17:24 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/org-ai-assisted/ai'
+
+commit ca72c3fff878968644884693cf4277352ff9f1ad
+Merge: ac8abb8 9a6e2a6
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Thu Aug 27 20:20:29 2026 -0400
+
+    Merge branch 'ai' into arraybolt3/trixie
+
+commit e1090655cdd598fc09dabe4a52835ff088493d7a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 25 03:31:45 2026 +0000
+
+    bumped changelog version
+
+commit 9a6e2a6b6d3b212c35bd7f26fcfc7efd80765464
+Author: assisted-by-ai (Bot Account) (Machine Account) <228987186+assisted-by-ai@users.noreply.github.com>
+Date:   Mon Aug 24 23:31:24 2026 -0400
+
+    ci: drop orphaned consumer-secrets-audit.yml (reusable decommissioned)
+
+commit 2f32c4e7629c3a40d311f01223b63ccb2e69f0eb
+Merge: 09efc95 5b4b1be
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Aug 24 03:07:02 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/org-ai-assisted/ai'
+
+commit 5b4b1be6006ba93e6109d746c4a51dc14b0ddc93
+Author: claude (dev272 e8b76afb-795c-4739-8ebd-023de854021e) <noreply@anthropic.com>
+Date:   Fri Aug 21 04:36:22 2026 -0400
+
+    sysmaint-panel: source helper-scripts via HELPER_SCRIPTS_PATH, drop SC1091 disable
+
+    - toggle-panic-on-oops: use source "${HELPER_SCRIPTS_PATH:-}"/usr/libexec/helper-scripts/<f>;
+      correct the stale shellcheck source= directives to the canonical sibling-repo form.
+    - completed pre-existing whole-file style debt: R-010 strict-mode block
+      (shopt inherit_errexit, shift_verbose, export LC_ALL=C) and SC2250 var braces.
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit 09efc957de7a312f08234932c40ddd1fe30e8754
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Aug 17 04:25:28 2026 +0000
+
+    bumped changelog version
+
+commit b91d59170df5c430f0769840f16c483cc191e83c
+Merge: d003afd 70c59fb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Aug 17 00:23:37 2026 -0400
+
+    Merge remote-tracking branch 'org-ai-assisted/master'
+
+commit d003afdd5235d3d006d5052193dcbd7a87572767
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 16 08:25:56 2026 +0000
+
+    bumped changelog version
+
+commit 799a8589dd697f027a206139ff48f41c2b06260f
+Merge: 3b9267f ac8abb8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 12 03:03:30 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit ac8abb82155bc2c32ad7679a7b7414bb6ac9d5a4
+Merge: da3198c 3b9267f
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Mon Aug 10 23:46:39 2026 -0400
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit da3198c2afb27b585132d309e8198841e2bb27a8
+Merge: 49af1c4 6b75e0b
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Aug 9 12:24:40 2026 -0400
+
+    Merge branch 'ai' into arraybolt3/trixie
+
+commit 70c59fbbf0bbb0f0f4d698baf5f461e1fdb7d84a
+Merge: 3b9267f 6b75e0b
+Author: assisted-by-ai (Bot Account) (Machine Account) <228987186+assisted-by-ai@users.noreply.github.com>
+Date:   Sat Aug 1 05:00:55 2026 -0400
+
+    Merge pull request #2 from org-ai-assisted/ai
+
+    CI: add bandit, codeql-actions, secrets-audit scanner workflows
+
+commit 3b9267f214185a4a8223a61f6c61ad9562e45852
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 1 08:42:35 2026 +0000
+
+    bumped changelog version
+
+commit d6353b4a7ee6e96f492234f8078473bfb79f4693
+Merge: 49af1c4 f9a7988
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 1 04:24:56 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/org-ai-assisted/master'
+
+commit 6b75e0b55d246434648f98281638502d9ef4d511
+Author: claude (dev142 b93fb2c6-e15f-4d45-8566-f3ded893b70e) <noreply@anthropic.com>
+Date:   Fri Jul 31 16:23:29 2026 -0400
+
+    CI: propagate bandit, codeql-actions, secrets-audit workflows
+
+    Byte-identical propagation from developer-meta-files
+    consumer-templates. Closes scanner-coverage gaps:
+
+    - consumer-bandit.yml: Python security lint, universal
+      self-discovery (extension + shebang scan), no per-repo config.
+    - consumer-codeql-actions.yml: CodeQL 'actions' language --
+      workflow-YAML security analysis (script-injection, missing
+      permissions, unpinned actions).
+    - consumer-secrets-audit.yml: manual-dispatch secrets surface
+      audit (presence flags only, values never emitted).
+
+    Managed files -- do not hand-edit; regenerated on the next
+    propagation pass.
+
+    ## AI-Assisted
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit f9a798836a49df52503bfb6b4af2fa2dd2ab4fde
+Merge: 49af1c4 3d94cd9
+Author: assisted-by-ai (Bot Account) (Machine Account) <228987186+assisted-by-ai@users.noreply.github.com>
+Date:   Fri Jul 31 15:51:44 2026 -0400
+
+    Merge pull request #1 from org-ai-assisted/ai
+
+    ci: add file-based CodeQL python lane
+
+commit 3d94cd91f9406965f94ae84bcc79c13745abbdb9
+Author: claude (dev142 b93fb2c6-e15f-4d45-8566-f3ded893b70e) <noreply@anthropic.com>
+Date:   Fri Jul 31 15:05:54 2026 -0400
+
+    ci: add file-based CodeQL python lane
+
+    Propagate consumer-codeql-python.yml byte-identically from
+    developer-meta-files/consumer-templates. sysmaint-panel ships real product Python (privileged PyQt maintenance panel) that had no python CodeQL
+    analysis.
+
+    build-mode none; push/PR/workflow_dispatch triggers. No dm-consumer.yml
+    section required (reusable soft-skips an absent section).
+
+    Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+commit 49af1c41362288fb3357f9415e581d6626ccb0f7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 20 22:22:37 2026 +0000
+
+    bumped changelog version
+
 commit 72b4cdea76c542a791188416f8e3fca3a55ad491
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 20 16:57:17 2026 -0400

@@ -1,3 +1,33 @@
+sysmaint-panel (3:5.6-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 06 Sep 2026 17:00:26 +0000
+
+sysmaint-panel (3:5.5-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Tue, 25 Aug 2026 03:31:44 +0000
+
+sysmaint-panel (3:5.4-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Mon, 17 Aug 2026 04:25:28 +0000
+
+sysmaint-panel (3:5.3-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sun, 16 Aug 2026 08:25:56 +0000
+
+sysmaint-panel (3:5.2-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Sat, 01 Aug 2026 08:42:35 +0000
+
 sysmaint-panel (3:5.1-1) unstable; urgency=medium
 
   * New upstream version (local package).
