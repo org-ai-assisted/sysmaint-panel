@@ -1,4 +1,4 @@
-#!/usr/bin/python3 -su
+#!/usr/bin/python3 -Bsu
 
 # Copyright (C) 2024 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@kicksecure.com>
 ## See the file COPYING for copying conditions.
@@ -36,6 +36,8 @@ from sysmaint_panel.wronguser_ui import Ui_WrongUserDialog
 from sysmaint_panel.uninstall_ui import Ui_UninstallDialog
 from sysmaint_panel.managepasswords_ui import Ui_ManagePasswordsDialog
 from sysmaint_panel.searchlogs_ui import Ui_SearchLogsDialog
+
+from guimessages.check_display import exit_if_no_gui
 
 # Honor sigterm
 import signal
@@ -1000,6 +1002,9 @@ class MainWindow(QMainWindow):
 
 
 def main():
+    # Constructing QApplication with no display SIGABRTs (exit 134) via an
+    # uncatchable C++ qFatal. Exit cleanly first on a headless machine.
+    exit_if_no_gui()
     app = QApplication(sys.argv)
     app.setDesktopFileName("sysmaint-panel")
 
