@@ -18,7 +18,6 @@ from PyQt5.QtWidgets import (
     QPushButton,
     QLabel,
     QVBoxLayout,
-    QHBoxLayout,
     QGridLayout,
     QGroupBox,
     QWidget,
@@ -90,33 +89,6 @@ def is_package_installed(package_name):
         ],
         check=False
     ).returncode == 0
-
-
-## The below two functions are commented out because they are not currently
-## used for anything, but may be useful in the future.
-#def is_secure_boot_enabled():
-#    return subprocess.run(
-#        ["/usr/bin/secure-boot-enabled-check"],
-#        check=False,
-#    ).returncode == 0
-#
-#
-#def can_mok_be_enrolled():
-#    if (
-#        not Path("/usr/bin/mokutil").is_file()
-#        or not os.access("/usr/bin/mokutil", os.X_OK)
-#    ):
-#        return False
-#    if not Path("/var/lib/dkms/mok.pub").is_file():
-#        ## Intentionally return True here, since the enroll application will
-#        ## generate a MOK if one doesn't exist, and a newly generated MOK
-#        ## surely won't be enrolled yet.
-#        return True
-#    ## 'mokutil --test-key' returns 0 if the MOK can be enrolled, 1 otherwise.
-#    return subprocess.run(
-#        ["/usr/bin/leaprun", "mokutil-test-key"],
-#        check=False,
-#    ).returncode == 0
 
 
 def timeout_lock(button):
